@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <title>Writing Contest</title>
+</head>
+<body>
+
+<!--To read json it needs the minified version of jquey-->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Optional JavaScript -->
+
+<script src="js/web3.min.js"></script>
+
+
+<div class="container">
+    <h2>Web3JS Lab</h2>
+    <h3>Literary Contest</h3>
+
+    <form action="">
+        <p>Check the address of the contract and press start!</p>
+        <div class="form-group" id="inputAddress">
+            <label for="cAddress">Address:</label>
+            <input class="form-control" id="cAddress" type="text" value="0x423bfd34ae167ad5cc1b670599ff2222ba08c091">
+        </div>
+
+
+        <button id="buttonSub" type="button">Start</button>
+
+        <div id="numberOfcontentRow">
+            There is a total of <span class="numberOfworks">?</span> compositions.
+        </div>
+
+    </form>
+
+</div>
+
+
+<div class="container">
+    <h2>Compositions</h2>
+    <p>Select a composition from the list and press the load button.</p>
+    <form>
+        <div class="form-group" class="compositionSelector">
+            <label for="sel1">Compositions:</label>
+            <select class="form-control" id="sel1">
+                <!--                <option>1</option>-->
+                <!--                <option>2</option>-->
+                <!--                <option>3</option>-->
+                <!--                <option>4</option>-->
+            </select>
+            <button id="buttonLoad" type="button">Load</button>
+        </div>
+    </form>
+</div>
+
+
+<!--Per vederli in fila-->
+
+<!--<div id="compositionRow" class="row">-->
+<!--    &lt;!&ndash; published composition LOAD HERE &ndash;&gt;-->
+<!--</div>-->
+
+
+<div class="container" id="compositionRow">
+    <!-- published composition LOAD HERE -->
+</div>
+
+
+<!-- <div id="composition"> -->
+
+
+<!-- style="display: none"> -->
+
+
+<div id="compositionTemplate" style="display: none">
+    <!--    <div class="col-sm-5 col-md-9 col-lg-10">-->
+    <div class="col-lg-10">
+        <div class="panel panel-default panel-composition" value="">
+            <div class="panel-heading">
+                <h3 class="panel-title">Title of a composition</h3>
+            </div>
+            <div class="panel-body" id="panelBody">
+                <strong>ID</strong>: <span class="composition-ID">?</span><br/>
+                <strong>Text</strong>: <span class="composition-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                                        </span><br/><br/>
+
+                <button class="btn-default btn-vote active" id="btnVoteComposition" type="button" value="0">Vote!
+                </button>
+                <strong>Votes</strong>: <span class="composition-votes">?</span><br/>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/literaryDapp.js"></script>
+
+
+</body>
+</html>
