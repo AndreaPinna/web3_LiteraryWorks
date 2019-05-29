@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "./ERC721.sol";
+import "http://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
 
 contract LiteraryWorks is ERC721{
     
