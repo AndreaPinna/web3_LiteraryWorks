@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
     }
 
     // Now you can start your app & access web3 freely:
-    startApp()
+    window.ethereum.enable(startApp())
 
 });
 
